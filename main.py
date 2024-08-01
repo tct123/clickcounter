@@ -7,19 +7,23 @@ def main(page: ft.Page):
 
     def opengithub(e):
         ob.openweb(e=e, page=page, url="https://github.com/tct123")
+
     def openyt1(e):
         ob.openweb(e=e, page=page, url="https://youtube.com/@tc-diy")
 
     page.appbar = ft.AppBar(
         title=ft.Text(page.title),
-        bgcolor=ft.colors.BLUE,
+        bgcolor=ft.colors.PURPLE_300,
         actions=[
             ft.PopupMenuButton(
-                items=[ft.PopupMenuItem(text="Github", on_click=opengithub),ft.PopupMenuItem(text="YouTube", on_click=openyt1)]
+                items=[
+                    ft.PopupMenuItem(text="Github", on_click=opengithub),
+                    ft.PopupMenuItem(text="YouTube", on_click=openyt1),
+                ]
             )
         ],
     )
-    # page.horizontal_alignment = ft.MainAxisAlignment.CENTER
+    page.horizontal_alignment = ft.MainAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
 
     def addfunc(e):
