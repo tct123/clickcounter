@@ -4,6 +4,7 @@ import openweb as ob
 
 def main(page: ft.Page):
     page.title = "Click counter"
+    page.theme_mode = ft.ThemeMode.LIGHT
 
     def opengithub(e):
         ob.openweb(e=e, page=page, url="https://github.com/tct123")
